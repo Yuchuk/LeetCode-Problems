@@ -12,13 +12,9 @@ h1 {
 	font-family: Tahoma, Verdana, Times New Roman;
 	text-shadow: -3px 3px #999999;
 }
-#column1 {
-			position: relative;
-			column-count: 2;
-}
 #img1 {
 		float: left;
-		margin: 5px;
+		padding: 5px;
 }
 #p1 {
 	font-size: 48pt;
@@ -29,32 +25,35 @@ h1 {
 }
 #p2 {
 	border: 2px solid gray;
-	width: 47%;
-	margin: 2%;
 	text-align: center-left;
 	font-family: 8pt;
 	font-weight: bold;
-	position: static;
 	background-color: #E8DC9B;
 	border-radius: 10px;
+	padding: 8px;
 }
 #p3 {
 	border: 2px none gray;
-	width: 47%;
 	font-family: 5px;
-	margin: 2%;
 	text-align: center-left;
 	font-weight: italic;
-	position: static;
 	border-radius: 10px;
+	margin: 8px;
 }
 #banner {
-		float: right;
-		margin: 0px 300px 0px 0px;
+		float: center;
+		margin: 0px 0px 0px 350px;
 }
 #rottenbig {
 			float: left;
 			margin: 0px 0px 0px 0px;
+}
+#dt1{
+	font-weight: bold;
+	font: 10pt;
+}
+#dl1 {
+		padding: 2%;
 }
 #div1 {
 		border: 3px none black;
@@ -79,4 +78,24 @@ h1 {
 		background-image: url("images/rbg.png");
 		background-image: repeat-x;
 		height: 83px;
+}
+#div5 {
+			position: relative;
+			column-count: 2;
+			column-width: 47%;
+			width: 550px;
+			column-rule: 1px none black;
+			margin: 2%;
+			vertical-align:20px;
+}
+#div6 {
+		float: right;
+		width: 250px;
+		padding: 10pt;
+		background-color: #A2B964;
+		font-family: Arial, Times New Roman;
+		font: 8pt;
+		padding: 0;
+		margin: 0;
+		position: relative;
 }
