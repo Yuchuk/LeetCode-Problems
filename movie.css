@@ -26,6 +26,7 @@ h1 {
 		font-family: Arial, Times New Roman;
 		font: 8pt;
 		border-top-right-radius: 15px;
+		border-bottom-right-radius: 15px;
 }
 #divleft {
 	width: 550px;
@@ -78,6 +79,8 @@ h1 {
 	text-align: center;
 	padding: 7px;
 	margin:0;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
 }
 #banner {
 		margin: 0px 0px 0px 300px;
