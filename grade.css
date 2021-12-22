@@ -1,0 +1,21 @@
+form {
+	background-color: #FFD1DC;
+	font-weight: bold;
+	width: 500px;
+	margin: auto;
+	padding: 10px;
+}
+#submit1 {
+		background-color: #FF6090;
+}
+#span1 {
+		color: #FF6090;
+		font-weight: normal;
+}
+#divright {
+			float: right;
+}
+#divleft {
+			overflow:auto;
+			float: left;
+}
