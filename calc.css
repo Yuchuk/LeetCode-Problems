@@ -1,0 +1,27 @@
+#img1 {
+width: 150px;
+height: 250px;
+}
+#label1 {
+	color: #F699CD;
+	font-size: 100px;
+}
+label {
+	font-size: 30px;
+}
+#div1 {
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px none black;
+	width:900px;
+}
+#submit1 {
+  background-color: #F699CD; 
+  border: none;
+  color: white;
+  padding: 5px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+}
