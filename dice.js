@@ -58,7 +58,7 @@ document.querySelector(".btn-hold").addEventListener("click", function () {
         //delgets dr toog ni haruulna
         document.getElementById("score-" + activePlayer).textContent = scores[activePlayer];
         //ug toglogch hojson eshiig shalgah 100-s ih
-        if (scores[activePlayer] >= 10) {
+        if (scores[activePlayer] >= 100) {
             //togloom duussan tolovt oruulna
             isNewGame = false;
             // hojson tul neriig yalagch bolgoj haruulna
