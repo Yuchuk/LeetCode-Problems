@@ -11,9 +11,52 @@ var uiController = (function () {
         incomeLabel: ".budget__income--value",
         expeseLabel: ".budget__expenses--value",
         percentageLabel: ".budget__expenses--percentage",
-        containerDiv: ".container"
+        containerDiv: ".container",
+		expensePercantageLabel: ".item__percentage",
+        dateLabel: ".budget__title--month"
     };
+    var nodeListForEach = function (list, callback) {
+        for (var i = 0; i < list.length; i++) {
+            callback(list[i], i);
+        }
+    };
+	
+	
+  var formatMoney = function(too, type) {
+    too = "" + too;
+    var x = too
+      .split("")
+      .reverse()
+      .join("");
 
+    var y = "";
+    var count = 1;
+
+    for (var i = 0; i < x.length; i++) {
+      y = y + x[i];
+
+      if (count % 3 === 0) y = y + ",";
+      count++;
+    }
+
+    var z = y
+      .split("")
+      .reverse()
+      .join("");
+
+    if (z[0] === ",") z = z.substr(1, z.length - 1);
+
+    if (type === "inc") z = "+ " + z;
+    else z = "- " + z;
+
+    return z;
+  };
+	    return {
+        displayDate: function () {
+            var unuudur = new Date();
+            document.querySelector(DOMstrings.dateLabel).textContent = unuudur.getMonth() + " сарын ";
+        },
+    }
     return {
         getInput: function () {
             return {
@@ -22,7 +65,14 @@ var uiController = (function () {
                 value: parseInt(document.querySelector(DOMstrings.inputValue).value)
             };
         },
-
+        displayPercentages: function(allPencentages) {
+            //зарлагын nodelist-г олох
+            var elements = document.querySelectorAll(DOMstrings.expensePercantageLabel);
+            //элемент болгоны хувьд зарлагын хувийг авч шивж оруулна
+            nodeListForEach(elements, function (el, index) {
+                el.textContent = allPencentages[index];
+            });
+        },
         getDOMstrings: function () {
             return DOMstrings;
         },
@@ -42,21 +92,32 @@ var uiController = (function () {
             fieldsArr[0].focus();
         },
 
-        tusviigUzuuleh: function (tusuv) {
-            document.querySelector(DOMstrings.tusuvLabel).textContent = tusuv.tusuv;
-            document.querySelector(DOMstrings.incomeLabel).textContent =
-                tusuv.totalInc;
-            document.querySelector(DOMstrings.expeseLabel).textContent =
-                tusuv.totalExp;
+tusviigUzuuleh: function(tusuv){
+      var type;
+      if (tusuv.tusuv > 0) type = "inc";
+      else type = "exp";
 
-            if (tusuv.huvi !== 0) {
-                document.querySelector(DOMstrings.percentageLabel).textContent =
-                    tusuv.huvi + "%";
-            } else {
-                document.querySelector(DOMstrings.percentageLabel).textContent =
-                    tusuv.huvi;
-            }
-        },
+      document.querySelector(DOMstrings.tusuvLabel).textContent = formatMoney(
+        tusuv.tusuv,
+        type
+      );
+      document.querySelector(DOMstrings.incomeLabel).textContent = formatMoney(
+        tusuv.totalInc,
+        "inc"
+      );
+      document.querySelector(DOMstrings.expeseLabel).textContent = formatMoney(
+        tusuv.totalExp,
+        "exp"
+      );
+
+      if (tusuv.huvi !== 0) {
+        document.querySelector(DOMstrings.percentageLabel).textContent =
+          tusuv.huvi + "%";
+      } else {
+        document.querySelector(DOMstrings.percentageLabel).textContent =
+          tusuv.huvi;
+      }
+    },
 
         deleteListItem: function (id) {
             var el = document.getElementById(id);
@@ -243,10 +304,11 @@ var appController = (function (uiController, financeController) {
         uiController.tusviigUzuuleh(tusuv);
         //7. Хувь тооцоолно
         financeController.calculatePercentages();
+      //элемэнтүүдийн хувийг хүлээж авна
         var allPercentages = financeController.getPercentages();
-        console.log(allPercentages);
+        //эдгээр хувийг дэлгэцэнд гаргана
+        uiController.displayPercentages(allPercentages);
     };
-
     var setupEventListeners = function () {
         var DOM = uiController.getDOMstrings();
 
@@ -280,18 +342,20 @@ var appController = (function (uiController, financeController) {
             });
     };
 
-    return {
-        init: function () {
-            console.log("Application started...");
-            uiController.tusviigUzuuleh({
-                tusuv: 0,
-                huvi: 0,
-                totalInc: 0,
-                totalExp: 0
-            });
-            setupEventListeners();
-        }
-    };
+  return {
+    init: function() {
+      console.log("Application started...");
+      uiController.displayDate();
+     uiController.tusviigUzuuleh({
+        tusuv: 0,
+        huvi: 0,
+        totalInc: 0,
+        totalExp: 0
+      });
+      setupEventListeners();
+    }
+  };
 })(uiController, financeController);
 
+}
 appController.init();

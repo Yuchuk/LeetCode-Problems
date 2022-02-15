@@ -1,7 +1,7 @@
 function calculateTip(){
-	var numSubTotal = document.getElementsByName("numSubTotal")[0];
-	var numTipPercent = document.getElementsByName("numTipPercent")[0];
-	var totalAmount = document.getElementsByName("totalAmount")[0];
+	var numSubTotal = parseInt(document.getElementsByName("numSubTotal")[0]);
+	var numTipPercent = parseInt(document.getElementsByName("numTipPercent")[0]);
+	var totalAmount = parseInt(document.getElementsByName("totalAmount")[0]);
 		console.log(numSubTotal);
 		console.log(typeof(numSubTotal));
 		console.log(numTipPercent);
