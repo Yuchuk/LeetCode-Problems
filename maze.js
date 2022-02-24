@@ -14,6 +14,7 @@ var hulganaOngorsonEseh;
 var isPlaying;
 var togloomEhellee;
 var togloomDuuslaa;
+var allArea;
 
 //тоглоом эхэллээ
 window.onload = function(){
@@ -31,8 +32,8 @@ window.onload = function(){
 	hulganaOngorsonEseh = document.getElementById("boundary5");
 	hulganaOngorsonEseh.addEventListener("mouseover", alertFunction);
 	
-	//hulganaOngorsonEseh = document.getElementById("maze");
-	//hulganaOngorsonEseh.addEventListener("mouseout", alertFunction);
+	allArea = document.getElementById("maze");
+	//allArea.addEventListener("mouseout", alertFunction);
 	
 	togloomDuuslaa = document.getElementById("end");
 	togloomDuuslaa.addEventListener("click", endGame);
@@ -42,12 +43,15 @@ function alertFunction(){
 		if(isPlaying){
 		alert("You clicked wrong way");
 		isPlaying = false;
+		//зам улаан өнгөтэй болгох
+		allArea.style.backgroundColor = "red";
 		} else {
 		alert("Please click S button to start game");
 		}
 	}
 function startGame() {
 	isPlaying = true;
+	allArea.style.backgroundColor = "white";
 	console.log("You clicked S");
 }
 //тоглоом дууслаа 
