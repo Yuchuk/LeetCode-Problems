@@ -13,6 +13,8 @@ public class Lab {
             minInt = Math.min(minInt, arrayOfInt);
         }
         return minInt;
+
+
     }
 
     static int averageOfArray(int [] arrayOfInts){
@@ -52,6 +54,7 @@ public class Lab {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please insert your text:");
         String text = scanner.nextLine();
+
         convertCharacterText(text);
         System.out.println("Converted letter: "+convertCharacterText(text));
 
