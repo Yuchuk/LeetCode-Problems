@@ -13,7 +13,7 @@ public class AccountManager {
         employee.addSavingAccount(savingAccounts);
         employee.addRetirementAccount(retirementAccounts);
         //TODO Call computeAccountBalanceSum function
-        computeAccountBalanceSum();
+        //computeAccountBalanceSum();
     }
     public static double computeAccountBalanceSum(List<Employee> employeeList) {
 
