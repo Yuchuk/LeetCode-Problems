@@ -28,36 +28,96 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Morgage.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MorgageCalculator.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;new-today&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/chuluunyura/Documents/GitHub/LeetCode_problems&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AccountManager.executor": "Run",
+    "Application.DailyProblems.isPalindrome.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.Morgage.executor": "Run",
+    "Application.MorgageCalculator.executor": "Run",
+    "Application.Queue.executor": "Run",
+    "Application.addDigits.executor": "Run",
+    "Application.clumsy.executor": "Run",
+    "Application.distributeCandies.executor": "Run",
+    "Application.findErrorNums.executor": "Run",
+    "Application.findRestaurant.executor": "Run",
+    "Application.isPalindrome.executor": "Run",
+    "Application.isPowerOfFour.executor": "Run",
+    "Application.isUgly.executor": "Run",
+    "Application.relativeSortArray.executor": "Run",
+    "Application.shuffle.executor": "Run",
+    "Application.uniqueOccurrences.executor": "Run",
+    "Application.wordPattern.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "new-today",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/chuluunyura/Documents/GitHub/LeetCode_problems"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Morgage">
-    <configuration name="Morgage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Morgage" />
+  <component name="RunManager" selected="Application.shuffle">
+    <configuration name="findRestaurant" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DailyProblems.findRestaurant" />
       <module name="Yuchuk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DailyProblems.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MorgageCalculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MorgageCalculator.src.MorgageCalculator" />
+    <configuration name="isPowerOfFour" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DailyProblems.isPowerOfFour" />
       <module name="Yuchuk" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="MorgageCalculator.src.*" />
+          <option name="PATTERN" value="DailyProblems.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="relativeSortArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DailyProblems.relativeSortArray" />
+      <module name="Yuchuk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DailyProblems.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="shuffle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DailyProblems.shuffle" />
+      <module name="Yuchuk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DailyProblems.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wordPattern" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DailyProblems.wordPattern" />
+      <module name="Yuchuk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DailyProblems.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -67,8 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Morgage" />
-        <item itemvalue="Application.MorgageCalculator" />
+        <item itemvalue="Application.shuffle" />
+        <item itemvalue="Application.isPowerOfFour" />
+        <item itemvalue="Application.wordPattern" />
+        <item itemvalue="Application.findRestaurant" />
+        <item itemvalue="Application.relativeSortArray" />
       </list>
     </recent_temporary>
   </component>
