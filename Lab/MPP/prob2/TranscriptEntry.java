@@ -19,4 +19,13 @@ public class TranscriptEntry {
     public Course getCourse(){
         return course;
     }
+    public void setDateTaken(LocalDate dateTaken){
+        this.dateTaken = dateTaken;
+    }
+    public void setGrade(String grade){
+        this.grade = grade;
+    }
+    public void setCourse(Course course){
+        this.course = course;
+    }
 }

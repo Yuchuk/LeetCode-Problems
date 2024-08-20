@@ -24,4 +24,16 @@ public class Student {
     public PlanOfStudy getPlanOfStudy() {
         return planOfStudy;
     }
+    public void setFirstName(String firstName){
+        this.firstName = firstName;
+    }
+    public void setLastName(String lastName){
+        this.lastName = lastName;
+    }
+    public void setTranscript(Transcript transcript){
+        this.transcript = transcript;
+    }
+    public void setPlanOfStudy(PlanOfStudy planOfStudy){
+        this.planOfStudy = planOfStudy;
+    }
 }
