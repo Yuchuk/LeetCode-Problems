@@ -1,5 +1,7 @@
 package DailyProblems;
 
+import java.util.Arrays;
+
 public class shuffle {
     public static int[] shuffle(int[] nums, int n) {
         int[] result = new int[nums.length];
@@ -20,11 +22,6 @@ Return the array in the form [x1,y1,x2,y2,...,xn,yn].
         int[] nums = {1,2,3,4,4,3,2,1};
         int n = 4;
         int[] result = shuffle(nums, n);
-        System.out.print("Shuffle the Array: ");
-        System.out.print("{");
-        for(int i = 0; i < result.length; i++){
-            System.out.print(i+" ");
-        }
-        System.out.print("}");
+        System.out.print("Shuffle the Array: "+ Arrays.toString(result));
     }
 }

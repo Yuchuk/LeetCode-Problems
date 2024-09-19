@@ -1,4 +1,5 @@
 package DailyProblems;
+import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.Map;
 import java.util.HashMap;
@@ -44,5 +45,6 @@ public class maxSubsequence {
         int[] nums = {-1,-2,-1,3,4};
         int k = 3;
         int[] result = maxSubsequence(nums, k);
+        System.out.println(Arrays.toString(result));
     }
 }

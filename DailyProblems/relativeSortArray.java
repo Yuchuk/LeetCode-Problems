@@ -49,10 +49,6 @@ public class relativeSortArray {
         /* Sort the elements of arr1 such that the relative ordering of items in arr1 are the same as in arr2.
         Elements that do not appear in arr2 should be placed at the end of arr1 in ascending order
          */
-        System.out.print("Relative Sort Array: "+"[");
-        for (int i: result){
-            System.out.print(i+" ");
-        }
-        System.out.println("]");
+        System.out.print("Relative Sort Array: " + Arrays.toString(result));
     }
 }
